@@ -1,1 +1,36 @@
-
+{
+  "kind": "collectionType",
+  "collectionName": "reminders",
+  "info": {
+    "singularName": "reminder",
+    "pluralName": "reminders",
+    "displayName": "Reminder",
+    "description": "Stores reminders from the iOS application."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "topic": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "isCompleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "repeatOption": {
+      "type": "string",
+      "default": "None"
+    },
+    "documentId": {
+      "type": "string"
+    }
+  }
+}
