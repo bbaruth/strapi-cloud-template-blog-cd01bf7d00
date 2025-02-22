@@ -1,36 +1,30 @@
 {
   "kind": "collectionType",
-  "collectionName": "reminders",
+  "collectionName": "audit_logs",
   "info": {
-    "singularName": "reminder",
-    "pluralName": "reminders",
-    "displayName": "Reminder",
-    "description": "Stores reminders from the iOS application."
+    "singularName": "audit-log",
+    "pluralName": "audit-logs",
+    "displayName": "Audit Log",
+    "description": "Stores logs of all actions performed in the application."
   },
   "options": {
     "draftAndPublish": false
   },
   "attributes": {
-    "topic": {
+    "event": {
       "type": "string",
       "required": true
     },
-    "description": {
-      "type": "text"
+    "details": {
+      "type": "json"
     },
-    "date": {
+    "timestamp": {
       "type": "datetime"
     },
-    "isCompleted": {
-      "type": "boolean",
-      "default": false
-    },
-    "repeatOption": {
-      "type": "string",
-      "default": "None"
-    },
-    "documentId": {
-      "type": "string"
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
