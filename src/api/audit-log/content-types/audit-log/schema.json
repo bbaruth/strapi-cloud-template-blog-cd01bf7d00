@@ -27,10 +27,9 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "task": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::task.task"
+    "taskId": {
+      "type": "integer",
+      "required": false
     }
   }
 }
