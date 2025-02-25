@@ -12,7 +12,8 @@
   },
   "attributes": {
     "event": {
-      "type": "string",
+      "type": "enumeration",
+      "enum": ["created", "edited", "deleted", "checked"],
       "required": true
     },
     "details": {
@@ -25,6 +26,11 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "task": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::reminder.reminder"
     }
   }
 }
