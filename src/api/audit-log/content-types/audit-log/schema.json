@@ -30,7 +30,7 @@
     "task": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::reminder.reminder"
+      "target": "api::task.task"
     }
   }
 }
