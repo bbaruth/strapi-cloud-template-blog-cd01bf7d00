@@ -11,21 +11,10 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "topic": {
-      "type": "string",
-      "required": true
-    },
-    "description": {
-      "type": "text"
-    },
-    "date": {
-      "type": "datetime",
-      "required": true
-    },
-    "isCompleted": {
-      "type": "boolean",
-      "default": false
-    },
+    "topic": { "type": "string", "required": true },
+    "description": { "type": "text" },
+    "date": { "type": "datetime", "required": true },
+    "isCompleted": { "type": "boolean", "default": false },
     "repeatOption": {
       "type": "enumeration",
       "enum": ["None", "Daily", "Weekly", "Monthly"],
